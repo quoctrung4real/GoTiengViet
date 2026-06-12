@@ -3,7 +3,7 @@ import Cocoa
 /// Manages the menu bar icon and dropdown menu
 /// Also handles dock visibility and quit functionality
 /// Uses custom-drawn NSImage (NOT emoji) for the status indicator
-class StatusBarManager {
+class StatusBarManager: NSObject {
 
     /// Shared instance (set from AppDelegate)
     static var shared: StatusBarManager?

@@ -10,6 +10,7 @@
 		A10000001 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000001; };
 		A10000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000002; };
 		A10000003 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000003; };
+		B10000001 /* ClipboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000001; };
 		A10000004 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000004; };
 		A10000005 /* CharacterMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000005; };
 		A10000006 /* TonePlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000006; };
@@ -35,6 +36,7 @@
 		A20000001 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A20000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A20000003 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B20000001 /* ClipboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManager.swift; sourceTree = "<group>"; };
 		A20000004 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		A20000005 /* CharacterMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMap.swift; sourceTree = "<group>"; };
 		A20000006 /* TonePlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonePlacement.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A20000003 /* Constants.swift */,
+				B20000001 /* ClipboardManager.swift */,
 				A20000004 /* Logger.swift */,
 			);
 			path = Utils;
@@ -234,6 +237,7 @@
 				A10000001 /* main.swift in Sources */,
 				A10000002 /* AppDelegate.swift in Sources */,
 				A10000003 /* Constants.swift in Sources */,
+				B10000001 /* ClipboardManager.swift in Sources */,
 				A10000004 /* Logger.swift in Sources */,
 				A10000005 /* CharacterMap.swift in Sources */,
 				A10000006 /* TonePlacement.swift in Sources */,
