@@ -50,10 +50,83 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self?.statusBarManager?.validateMenuItems()
         }
 
+        // Start clipboard history monitoring
+        ClipboardManager.shared.startMonitoring()
+
+        // Listen for clipboard history changes to refresh menus
+        NotificationCenter.default.addObserver(
+            forName: ClipboardManager.historyDidChangeNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            self?.statusBarManager?.updateClipboardMenu()
+        }
+
         Log.info("GoTiengViet ready!")
     }
 
     func applicationWillTerminate(_ notification: Notification) {
+        ClipboardManager.shared.stopMonitoring()
         Log.info("GoTiengViet shutting down...")
+    }
+
+    // MARK: - Dock Menu
+
+    /// Provides the dock menu when the user right-clicks on the app icon in the Dock
+    func applicationDockMenu(_ sender: NSApplication) -> NSMenu? {
+        let menu = NSMenu()
+
+        // Clipboard history
+        let clipboardItem = NSMenuItem(title: "Clipboard", action: nil, keyEquivalent: "")
+        clipboardItem.submenu = ClipboardManager.shared.buildClipboardMenu(target: self)
+        menu.addItem(clipboardItem)
+
+        menu.addItem(NSMenuItem.separator())
+
+        // Preferences
+        let prefsItem = NSMenuItem(
+            title: "Bảng điều khiển...",
+            action: #selector(openPreferences(_:)),
+            keyEquivalent: ","
+        )
+        prefsItem.target = self
+        menu.addItem(prefsItem)
+
+        menu.addItem(NSMenuItem.separator())
+
+        // Quit
+        let quitItem = NSMenuItem(
+            title: "Thoát Gõ Tiếng Việt",
+            action: #selector(quitApp(_:)),
+            keyEquivalent: "q"
+        )
+        quitItem.target = self
+        menu.addItem(quitItem)
+
+        return menu
+    }
+
+    // MARK: - Actions
+
+    @objc private func openPreferences(_ sender: Any?) {
+        statusBarManager?.showPreferencesFromDock()
+    }
+
+    @objc private func quitApp(_ sender: Any?) {
+        Log.info("User requested quit from Dock menu")
+        NSApp.terminate(nil)
+    }
+}
+
+// MARK: - ClipboardMenuActionHandler (Dock Menu)
+
+extension AppDelegate: ClipboardMenuActionHandler {
+    @objc func clipboardItemClicked(_ sender: NSMenuItem) {
+        let index = sender.tag
+        ClipboardManager.shared.restoreEntry(at: index)
+    }
+
+    @objc func clearClipboardHistory(_ sender: Any?) {
+        ClipboardManager.shared.clearHistory()
     }
 }

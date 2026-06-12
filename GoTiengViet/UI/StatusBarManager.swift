@@ -1,6 +1,7 @@
 import Cocoa
 
 /// Manages the menu bar icon and dropdown menu
+/// Also handles dock visibility and quit functionality
 /// Uses custom-drawn NSImage (NOT emoji) for the status indicator
 class StatusBarManager {
 
@@ -15,6 +16,9 @@ class StatusBarManager {
 
     /// Reference to the preferences window controller
     private var preferencesWindowController: PreferencesWindowController?
+
+    /// Reference to the clipboard menu item (for dynamic updates)
+    private var clipboardMenuItem: NSMenuItem?
 
     // MARK: - Setup
 
@@ -115,6 +119,14 @@ class StatusBarManager {
 
         menu.addItem(NSMenuItem.separator())
 
+        // Clipboard history submenu
+        let clipboardItem = NSMenuItem(title: "Clipboard", action: nil, keyEquivalent: "")
+        clipboardItem.submenu = ClipboardManager.shared.buildClipboardMenu(target: self)
+        self.clipboardMenuItem = clipboardItem
+        menu.addItem(clipboardItem)
+
+        menu.addItem(NSMenuItem.separator())
+
         // Preferences
         let prefsItem = NSMenuItem(
             title: "Bảng điều khiển...",
@@ -132,6 +144,17 @@ class StatusBarManager {
         )
         aboutItem.target = self
         menu.addItem(aboutItem)
+
+        menu.addItem(NSMenuItem.separator())
+
+        // Quit
+        let quitItem = NSMenuItem(
+            title: "Thoát Gõ Tiếng Việt",
+            action: #selector(quitApp(_:)),
+            keyEquivalent: "q"
+        )
+        quitItem.target = self
+        menu.addItem(quitItem)
 
         statusItem?.menu = menu
     }
@@ -172,14 +195,39 @@ class StatusBarManager {
     }
 
     @objc private func showPreferences(_ sender: Any?) {
+        activateAndShowPreferences()
+    }
+
+    /// Called from AppDelegate's dock menu
+    func showPreferencesFromDock() {
+        activateAndShowPreferences()
+    }
+
+    /// Activates the app, shows the dock icon, and presents the preferences window
+    private func activateAndShowPreferences() {
         if preferencesWindowController == nil {
             preferencesWindowController = PreferencesWindowController()
         }
+
+        // Temporarily show the app in the Dock so the window can come to front
+        NSApp.setActivationPolicy(.regular)
+
         preferencesWindowController?.showWindow(nil)
+
+        // Make sure the window becomes key and is brought to front
+        if let window = preferencesWindowController?.window {
+            window.delegate = self
+            window.makeKeyAndOrderFront(nil)
+        }
+
         NSApp.activate(ignoringOtherApps: true)
     }
 
     @objc private func showAbout(_ sender: Any?) {
+        // Temporarily show in dock for the alert
+        NSApp.setActivationPolicy(.regular)
+        NSApp.activate(ignoringOtherApps: true)
+
         let alert = NSAlert()
         alert.messageText = AppConstants.appName
         alert.informativeText = """
@@ -193,6 +241,14 @@ class StatusBarManager {
         alert.alertStyle = .informational
         alert.addButton(withTitle: "Đóng")
         alert.runModal()
+
+        // Hide from dock again after closing
+        NSApp.setActivationPolicy(.accessory)
+    }
+
+    @objc private func quitApp(_ sender: Any?) {
+        Log.info("User requested quit from status bar menu")
+        NSApp.terminate(nil)
     }
 
     // MARK: - Menu Validation
@@ -212,5 +268,37 @@ class StatusBarManager {
                 }
             }
         }
+    }
+
+    /// Refresh the clipboard submenu with latest history
+    func updateClipboardMenu() {
+        clipboardMenuItem?.submenu = ClipboardManager.shared.buildClipboardMenu(target: self)
+    }
+}
+
+// MARK: - NSWindowDelegate
+
+extension StatusBarManager: NSWindowDelegate {
+    /// When the preferences window closes, hide the app from the Dock again
+    func windowWillClose(_ notification: Notification) {
+        // Restore accessory policy (hide from dock) after preferences window closes
+        DispatchQueue.main.async {
+            NSApp.setActivationPolicy(.accessory)
+        }
+    }
+}
+
+// MARK: - ClipboardMenuActionHandler
+
+extension StatusBarManager: ClipboardMenuActionHandler {
+    @objc func clipboardItemClicked(_ sender: NSMenuItem) {
+        let index = sender.tag
+        ClipboardManager.shared.restoreEntry(at: index)
+        updateClipboardMenu()
+    }
+
+    @objc func clearClipboardHistory(_ sender: Any?) {
+        ClipboardManager.shared.clearHistory()
+        updateClipboardMenu()
     }
 }

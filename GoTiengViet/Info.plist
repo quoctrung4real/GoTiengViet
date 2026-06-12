@@ -37,9 +37,10 @@
     <key>tsInputMethodIconFileKey</key>
     <string>GoTiengViet</string>
 
-    <!-- Background-Only Application -->
-    <!-- Input methods run as background processes without a dock icon -->
-    <key>LSBackgroundOnly</key>
+    <!-- Agent Application (LSUIElement) -->
+    <!-- Input methods run as agent apps: no dock icon by default, -->
+    <!-- but can show windows and appear in dock when needed -->
+    <key>LSUIElement</key>
     <true/>
 
     <!-- macOS Deployment Target -->
