@@ -1,0 +1,209 @@
+{
+  "" : {
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/GoTiengViet-primary.dia",
+    "emit-module-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/GoTiengViet-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/GoTiengViet-primary-emit-module.dia",
+    "pch" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/GoTiengViet-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/GoTiengViet-primary.swiftdeps"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/AppDelegate.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/CharacterMap.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CharacterMap~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/MacroEngine.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/MacroEngine~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/SpellChecker.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SpellChecker~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TelexProcessor.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TelexProcessor~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TonePlacement.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/TonePlacement~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VNIProcessor.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VNIProcessor~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VietnameseEngine.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Input/ClientAppDetector.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Input/CompositionBuffer.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/CompositionBuffer~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Input/InputController.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/InputController~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Input/SecureFieldHandler.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Preferences/HotkeyManager.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/HotkeyManager~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Preferences/PreferencesManager.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesManager~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/LiquidGlassView.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/PreferencesWindow.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/StatusBarManager.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/StatusBarManager~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Constants.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Constants~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Logger.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/Logger~partial.swiftmodule"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/main.swift" : {
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.dia",
+    "index-unit-output-path" : "/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.o",
+    "swift-dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main.swiftdeps",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Debug/GoTiengViet.build/Objects-normal/arm64/main~partial.swiftmodule"
+  }
+}

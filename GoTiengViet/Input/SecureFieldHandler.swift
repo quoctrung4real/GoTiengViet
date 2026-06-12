@@ -54,7 +54,7 @@ class SecureFieldHandler {
 
         // Method 2: Check if the client's bundle identifier is a known secure process
         if let textInput = client as? IMKTextInput {
-            if let bundleId = textInput.bundleIdentifier?() {
+            if let bundleId = textInput.bundleIdentifier() {
                 if SecureFieldHandler.secureProcesses.contains(bundleId) {
                     Log.security("Detected secure process: \(bundleId)")
                     return true

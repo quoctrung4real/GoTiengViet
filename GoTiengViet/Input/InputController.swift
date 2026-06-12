@@ -54,7 +54,7 @@ class InputController: IMKInputController {
 
         // Detect client app
         if let textInput = client {
-            let bundleId = textInput.bundleIdentifier?()
+            let bundleId = textInput.bundleIdentifier()
             appDetector.updateCurrentApp(bundleId: bundleId)
         }
 
