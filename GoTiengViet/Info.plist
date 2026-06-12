@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Bundle Configuration -->
+    <key>CFBundleDevelopmentRegion</key>
+    <string>vi</string>
+    <key>CFBundleDisplayName</key>
+    <string>Gõ Tiếng Việt</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIconFile</key>
+    <string>GoTiengViet</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+
+    <!-- Input Method Kit Configuration -->
+    <!-- CRITICAL: Bundle ID must contain .inputmethod. -->
+    <key>InputMethodConnectionName</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)_Connection</string>
+    <key>InputMethodServerControllerClass</key>
+    <string>$(PRODUCT_MODULE_NAME).InputController</string>
+    <key>tsInputMethodCharacterRepertoireKey</key>
+    <array>
+        <string>vi</string>
+    </array>
+    <key>tsInputMethodIconFileKey</key>
+    <string>GoTiengViet</string>
+
+    <!-- Background-Only Application -->
+    <!-- Input methods run as background processes without a dock icon -->
+    <key>LSBackgroundOnly</key>
+    <true/>
+
+    <!-- macOS Deployment Target -->
+    <key>LSMinimumSystemVersion</key>
+    <string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+
+    <!-- Supported Architectures -->
+    <!-- Universal Binary: arm64 (Apple Silicon) + x86_64 (Intel) -->
+
+    <!-- Application Category -->
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+
+    <!-- Privacy descriptions (if needed for accessibility) -->
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright © 2026 GoTiengViet. All rights reserved.</string>
+</dict>
+</plist>

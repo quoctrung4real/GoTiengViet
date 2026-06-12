@@ -1,0 +1,737 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.xctest/Contents/MacOS/GoTiengVietPackageTests",
+      "packagePath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet",
+      "productName" : "GoTiengVietPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.GoTiengVietEngine-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/sources",
+      "importPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/CharacterMap.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/MacroEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/SpellChecker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TelexProcessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TonePlacement.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VNIProcessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VietnameseEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Constants.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Logger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "GoTiengVietEngine",
+      "moduleOutputPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietEngine.swiftmodule",
+      "objects" : [
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/CharacterMap.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/MacroEngine.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/SpellChecker.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/TelexProcessor.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/TonePlacement.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/VNIProcessor.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/VietnameseEngine.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/Constants.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/Logger.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/include/GoTiengVietEngine-Swift.h",
+        "-swift-version",
+        "5",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "gotiengviet"
+      ],
+      "outputFileMapPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietEngine.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/CharacterMap.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/MacroEngine.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/SpellChecker.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TelexProcessor.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TonePlacement.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VNIProcessor.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VietnameseEngine.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Constants.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Logger.swift"
+      ],
+      "tempsPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.GoTiengVietEngineTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/sources",
+      "importPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/CharacterMapTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/SpellCheckerTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TelexProcessorTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TonePlacementTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VNIProcessorTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VietnameseEngineTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietEngine.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "GoTiengVietEngineTests",
+      "moduleOutputPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietEngineTests.swiftmodule",
+      "objects" : [
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/CharacterMapTests.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/SpellCheckerTests.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TelexProcessorTests.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TonePlacementTests.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VNIProcessorTests.swift.o",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VietnameseEngineTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "gotiengviet"
+      ],
+      "outputFileMapPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietEngineTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/CharacterMapTests.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/SpellCheckerTests.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TelexProcessorTests.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TonePlacementTests.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VNIProcessorTests.swift",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VietnameseEngineTests.swift"
+      ],
+      "tempsPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.GoTiengVietPackageTests-arm64-apple-macosx-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/sources",
+      "importPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietEngineTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "GoTiengVietPackageTests",
+      "moduleOutputPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx12.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/include/GoTiengVietPackageTests-Swift.h",
+        "-Xfrontend",
+        "-experimental-lazy-typecheck",
+        "-Xfrontend",
+        "-experimental-skip-all-function-bodies",
+        "-Xfrontend",
+        "-experimental-allow-module-with-compiler-errors",
+        "-Xfrontend",
+        "-empty-abi-descriptor",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "gotiengviet"
+      ],
+      "outputFileMapPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules/GoTiengVietPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : true,
+      "sources" : [
+        "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "GoTiengVietEngine" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "GoTiengVietEngine",
+      "-package-name",
+      "gotiengviet",
+      "-c",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/CharacterMap.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/MacroEngine.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/SpellChecker.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TelexProcessor.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TonePlacement.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VNIProcessor.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VietnameseEngine.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Constants.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Logger.swift",
+      "-I",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/include/GoTiengVietEngine-Swift.h",
+      "-swift-version",
+      "5",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "gotiengviet",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "GoTiengVietEngineTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "GoTiengVietEngineTests",
+      "-package-name",
+      "gotiengviet",
+      "-c",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/CharacterMapTests.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/SpellCheckerTests.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TelexProcessorTests.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TonePlacementTests.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VNIProcessorTests.swift",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VietnameseEngineTests.swift",
+      "-I",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "gotiengviet",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "GoTiengVietPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "GoTiengVietPackageTests",
+      "-package-name",
+      "gotiengviet",
+      "-c",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx12.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/include/GoTiengVietPackageTests-Swift.h",
+      "-Xfrontend",
+      "-experimental-lazy-typecheck",
+      "-Xfrontend",
+      "-experimental-skip-all-function-bodies",
+      "-Xfrontend",
+      "-experimental-allow-module-with-compiler-errors",
+      "-Xfrontend",
+      "-empty-abi-descriptor",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.4.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "gotiengviet",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "GoTiengVietEngine" : [
+
+    ],
+    "GoTiengVietEngineTests" : [
+      "GoTiengVietEngine"
+    ],
+    "GoTiengVietPackageTests" : [
+      "GoTiengVietEngineTests",
+      "GoTiengVietEngine"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/CharacterMap.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/MacroEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/SpellChecker.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TelexProcessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/TonePlacement.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VNIProcessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VietnameseEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Constants.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/Logger.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngine.build/sources"
+    },
+    "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/CharacterMapTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/SpellCheckerTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TelexProcessorTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TonePlacementTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VNIProcessorTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VietnameseEngineTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/sources"
+    },
+    "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietPackageTests.build/sources"
+    },
+    "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

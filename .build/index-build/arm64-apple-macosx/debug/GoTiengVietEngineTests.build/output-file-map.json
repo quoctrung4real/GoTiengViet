@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/primary.swiftdeps"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/CharacterMapTests.swift": {
+    "dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/CharacterMapTests.d",
+    "object": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/CharacterMapTests.swift.o",
+    "swiftmodule": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/CharacterMapTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/CharacterMapTests.swiftdeps",
+    "diagnostics": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/CharacterMapTests.dia"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/SpellCheckerTests.swift": {
+    "dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/SpellCheckerTests.d",
+    "object": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/SpellCheckerTests.swift.o",
+    "swiftmodule": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/SpellCheckerTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/SpellCheckerTests.swiftdeps",
+    "diagnostics": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/SpellCheckerTests.dia"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TelexProcessorTests.swift": {
+    "dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TelexProcessorTests.d",
+    "object": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TelexProcessorTests.swift.o",
+    "swiftmodule": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TelexProcessorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TelexProcessorTests.swiftdeps",
+    "diagnostics": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TelexProcessorTests.dia"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/TonePlacementTests.swift": {
+    "dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TonePlacementTests.d",
+    "object": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TonePlacementTests.swift.o",
+    "swiftmodule": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TonePlacementTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TonePlacementTests.swiftdeps",
+    "diagnostics": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/TonePlacementTests.dia"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VNIProcessorTests.swift": {
+    "dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VNIProcessorTests.d",
+    "object": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VNIProcessorTests.swift.o",
+    "swiftmodule": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VNIProcessorTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VNIProcessorTests.swiftdeps",
+    "diagnostics": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VNIProcessorTests.dia"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengVietTests/EngineTests/VietnameseEngineTests.swift": {
+    "dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VietnameseEngineTests.d",
+    "object": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VietnameseEngineTests.swift.o",
+    "swiftmodule": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VietnameseEngineTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VietnameseEngineTests.swiftdeps",
+    "diagnostics": "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/.build/index-build/arm64-apple-macosx/debug/GoTiengVietEngineTests.build/VietnameseEngineTests.dia"
+  }
+}

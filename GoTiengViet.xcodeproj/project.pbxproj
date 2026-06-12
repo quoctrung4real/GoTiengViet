@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000001 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000001; };
+		A10000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000002; };
+		A10000003 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000003; };
+		A10000004 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000004; };
+		A10000005 /* CharacterMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000005; };
+		A10000006 /* TonePlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000006; };
+		A10000007 /* TelexProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000007; };
+		A10000008 /* VNIProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000008; };
+		A10000009 /* VietnameseEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000009; };
+		A10000010 /* SpellChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010; };
+		A10000011 /* MacroEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000011; };
+		A10000012 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000012; };
+		A10000013 /* CompositionBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000013; };
+		A10000014 /* SecureFieldHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000014; };
+		A10000015 /* ClientAppDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000015; };
+		A10000016 /* PreferencesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000016; };
+		A10000017 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000017; };
+		A10000018 /* LiquidGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000018; };
+		A10000019 /* StatusBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000019; };
+		A10000020 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000020; };
+		A10000021 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000021; };
+		A10000022 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000022; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000001 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A20000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A20000003 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A20000004 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		A20000005 /* CharacterMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMap.swift; sourceTree = "<group>"; };
+		A20000006 /* TonePlacement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonePlacement.swift; sourceTree = "<group>"; };
+		A20000007 /* TelexProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelexProcessor.swift; sourceTree = "<group>"; };
+		A20000008 /* VNIProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNIProcessor.swift; sourceTree = "<group>"; };
+		A20000009 /* VietnameseEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VietnameseEngine.swift; sourceTree = "<group>"; };
+		A20000010 /* SpellChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellChecker.swift; sourceTree = "<group>"; };
+		A20000011 /* MacroEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacroEngine.swift; sourceTree = "<group>"; };
+		A20000012 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		A20000013 /* CompositionBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionBuffer.swift; sourceTree = "<group>"; };
+		A20000014 /* SecureFieldHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureFieldHandler.swift; sourceTree = "<group>"; };
+		A20000015 /* ClientAppDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientAppDetector.swift; sourceTree = "<group>"; };
+		A20000016 /* PreferencesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesManager.swift; sourceTree = "<group>"; };
+		A20000017 /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		A20000018 /* LiquidGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidGlassView.swift; sourceTree = "<group>"; };
+		A20000019 /* StatusBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarManager.swift; sourceTree = "<group>"; };
+		A20000020 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		A20000021 /* InputMethodKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InputMethodKit.framework; path = System/Library/Frameworks/InputMethodKit.framework; sourceTree = SDKROOT; };
+		A20000022 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		A20000023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000099 /* GoTiengViet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTiengViet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000021 /* InputMethodKit.framework in Frameworks */,
+				A10000022 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000001 /* GoTiengViet */ = {
+			isa = PBXGroup;
+			children = (
+				A40000002 /* GoTiengViet */,
+				A40000009 /* Frameworks */,
+				A40000010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000002 /* GoTiengViet */ = {
+			isa = PBXGroup;
+			children = (
+				A20000001 /* main.swift */,
+				A20000002 /* AppDelegate.swift */,
+				A20000023 /* Info.plist */,
+				A40000003 /* Engine */,
+				A40000004 /* Input */,
+				A40000005 /* Preferences */,
+				A40000006 /* UI */,
+				A40000007 /* Utils */,
+				A40000008 /* Resources */,
+			);
+			path = GoTiengViet;
+			sourceTree = "<group>";
+		};
+		A40000003 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				A20000005 /* CharacterMap.swift */,
+				A20000006 /* TonePlacement.swift */,
+				A20000007 /* TelexProcessor.swift */,
+				A20000008 /* VNIProcessor.swift */,
+				A20000009 /* VietnameseEngine.swift */,
+				A20000010 /* SpellChecker.swift */,
+				A20000011 /* MacroEngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		A40000004 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				A20000012 /* InputController.swift */,
+				A20000013 /* CompositionBuffer.swift */,
+				A20000014 /* SecureFieldHandler.swift */,
+				A20000015 /* ClientAppDetector.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		A40000005 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A20000016 /* PreferencesManager.swift */,
+				A20000017 /* HotkeyManager.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		A40000006 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A20000018 /* LiquidGlassView.swift */,
+				A20000019 /* StatusBarManager.swift */,
+				A20000020 /* PreferencesWindow.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A40000007 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A20000003 /* Constants.swift */,
+				A20000004 /* Logger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A40000008 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A40000009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A20000021 /* InputMethodKit.framework */,
+				A20000022 /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A40000010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000099 /* GoTiengViet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000001 /* GoTiengViet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000003 /* Build configuration list for PBXNativeTarget "GoTiengViet" */;
+			buildPhases = (
+				A60000001 /* Sources */,
+				A30000001 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoTiengViet;
+			productName = GoTiengViet;
+			productReference = A20000099 /* GoTiengViet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A50000099 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					A50000001 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = A70000001 /* Build configuration list for PBXProject "GoTiengViet" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = vi;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				vi,
+				en,
+				Base,
+			);
+			mainGroup = A40000001 /* GoTiengViet */;
+			productRefGroup = A40000010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000001 /* GoTiengViet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000001 /* main.swift in Sources */,
+				A10000002 /* AppDelegate.swift in Sources */,
+				A10000003 /* Constants.swift in Sources */,
+				A10000004 /* Logger.swift in Sources */,
+				A10000005 /* CharacterMap.swift in Sources */,
+				A10000006 /* TonePlacement.swift in Sources */,
+				A10000007 /* TelexProcessor.swift in Sources */,
+				A10000008 /* VNIProcessor.swift in Sources */,
+				A10000009 /* VietnameseEngine.swift in Sources */,
+				A10000010 /* SpellChecker.swift in Sources */,
+				A10000011 /* MacroEngine.swift in Sources */,
+				A10000012 /* InputController.swift in Sources */,
+				A10000013 /* CompositionBuffer.swift in Sources */,
+				A10000014 /* SecureFieldHandler.swift in Sources */,
+				A10000015 /* ClientAppDetector.swift in Sources */,
+				A10000016 /* PreferencesManager.swift in Sources */,
+				A10000017 /* HotkeyManager.swift in Sources */,
+				A10000018 /* LiquidGlassView.swift in Sources */,
+				A10000019 /* StatusBarManager.swift in Sources */,
+				A10000020 /* PreferencesWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A80000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A80000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GoTiengViet/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 GoTiengViet. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.govietnamese.inputmethod.GoTiengViet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A80000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = GoTiengViet/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2026 GoTiengViet. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.govietnamese.inputmethod.GoTiengViet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000001 /* Build configuration list for PBXProject "GoTiengViet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000001 /* Debug */,
+				A80000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70000003 /* Build configuration list for PBXNativeTarget "GoTiengViet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A80000003 /* Debug */,
+				A80000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A50000099 /* Project object */;
+}
