@@ -41,6 +41,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         StatusBarManager.shared = statusBarManager
         statusBarManager?.setup()
 
+        // Show app in Dock so dock menu (Clipboard, Quit) is accessible
+        NSApp.setActivationPolicy(.regular)
+
         // Listen for preference changes
         NotificationCenter.default.addObserver(
             forName: PreferencesManager.preferencesDidChangeNotification,

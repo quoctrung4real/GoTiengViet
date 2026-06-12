@@ -203,20 +203,16 @@ class StatusBarManager {
         activateAndShowPreferences()
     }
 
-    /// Activates the app, shows the dock icon, and presents the preferences window
+    /// Activates the app and presents the preferences window
     private func activateAndShowPreferences() {
         if preferencesWindowController == nil {
             preferencesWindowController = PreferencesWindowController()
         }
 
-        // Temporarily show the app in the Dock so the window can come to front
-        NSApp.setActivationPolicy(.regular)
-
         preferencesWindowController?.showWindow(nil)
 
         // Make sure the window becomes key and is brought to front
         if let window = preferencesWindowController?.window {
-            window.delegate = self
             window.makeKeyAndOrderFront(nil)
         }
 
@@ -224,8 +220,6 @@ class StatusBarManager {
     }
 
     @objc private func showAbout(_ sender: Any?) {
-        // Temporarily show in dock for the alert
-        NSApp.setActivationPolicy(.regular)
         NSApp.activate(ignoringOtherApps: true)
 
         let alert = NSAlert()
@@ -241,9 +235,6 @@ class StatusBarManager {
         alert.alertStyle = .informational
         alert.addButton(withTitle: "Đóng")
         alert.runModal()
-
-        // Hide from dock again after closing
-        NSApp.setActivationPolicy(.accessory)
     }
 
     @objc private func quitApp(_ sender: Any?) {
@@ -279,13 +270,7 @@ class StatusBarManager {
 // MARK: - NSWindowDelegate
 
 extension StatusBarManager: NSWindowDelegate {
-    /// When the preferences window closes, hide the app from the Dock again
-    func windowWillClose(_ notification: Notification) {
-        // Restore accessory policy (hide from dock) after preferences window closes
-        DispatchQueue.main.async {
-            NSApp.setActivationPolicy(.accessory)
-        }
-    }
+    // Window delegate kept for future use (e.g., tracking window lifecycle)
 }
 
 // MARK: - ClipboardMenuActionHandler

@@ -37,11 +37,10 @@
     <key>tsInputMethodIconFileKey</key>
     <string>GoTiengViet</string>
 
-    <!-- Agent Application (LSUIElement) -->
-    <!-- Input methods run as agent apps: no dock icon by default, -->
-    <!-- but can show windows and appear in dock when needed -->
+    <!-- Regular Application with Dock icon -->
+    <!-- App shows in the Dock for clipboard history and quit access -->
     <key>LSUIElement</key>
-    <true/>
+    <false/>
 
     <!-- macOS Deployment Target -->
     <key>LSMinimumSystemVersion</key>
