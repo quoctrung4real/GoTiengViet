@@ -1,0 +1,66 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "a5bfa589886dfcc70fd68e27a101402d574db258775154743164cd7d66dd162c"
+    }
+  ],
+  "containerPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "hostTargetedPlatform" : null,
+      "platform" : "macosx",
+      "sdk" : "macosx26.5",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Products",
+      "derivedDataPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "ARCHS" : "arm64",
+          "BUILD_DIR" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

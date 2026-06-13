@@ -491,7 +491,11 @@ fileprivate func createRow(label: String, control: () -> NSView) -> NSStackView 
     stack.spacing = 16
 
     let labelView = NSTextField(labelWithString: label)
-    labelView.font = NSFont.systemFont(ofSize: 13)
+    labelView.font = NSFont.systemFont(ofSize: 13, weight: .medium)
+    labelView.textColor = .secondaryLabelColor
+    // Force a fixed width so the controls align perfectly vertically!
+    labelView.widthAnchor.constraint(equalToConstant: 150).isActive = true
+    labelView.alignment = .left // Căn lề trái theo yêu cầu
     stack.addArrangedSubview(labelView)
 
     let controlView = control()
