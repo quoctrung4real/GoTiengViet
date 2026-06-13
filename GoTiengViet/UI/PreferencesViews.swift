@@ -18,7 +18,7 @@ class GeneralPrefsView: NSView {
     private func setup() {
         let stack = NSStackView()
         stack.orientation = .vertical
-        stack.alignment = .leading
+        stack.alignment = .width
         stack.spacing = 24
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
@@ -26,7 +26,8 @@ class GeneralPrefsView: NSView {
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: topAnchor),
             stack.leadingAnchor.constraint(equalTo: leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: trailingAnchor)
+            stack.trailingAnchor.constraint(equalTo: trailingAnchor),
+            stack.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
 
         // 1. KIỂU GÕ
@@ -154,6 +155,7 @@ class MacroPrefsView: NSView, NSTableViewDelegate, NSTableViewDataSource, NSText
     private func setup() {
         let stack = NSStackView()
         stack.orientation = .vertical
+        stack.alignment = .width
         stack.spacing = 16
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
@@ -174,6 +176,7 @@ class MacroPrefsView: NSView, NSTableViewDelegate, NSTableViewDataSource, NSText
         scrollView.hasVerticalScroller = true
         scrollView.autohidesScrollers = true
         scrollView.borderType = .bezelBorder
+        scrollView.heightAnchor.constraint(equalToConstant: 250).isActive = true
 
         tableView = NSTableView()
         tableView.delegate = self
@@ -323,7 +326,8 @@ class ConvertPrefsView: NSView {
         addSubview(label)
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: centerYAnchor)
+            label.centerYAnchor.constraint(equalTo: centerYAnchor),
+            heightAnchor.constraint(greaterThanOrEqualToConstant: 200)
         ])
     }
     required init?(coder: NSCoder) { fatalError() }
@@ -344,7 +348,7 @@ class AdvancedPrefsView: NSView, NSTableViewDelegate, NSTableViewDataSource {
         let stack = NSStackView()
         stack.orientation = .vertical
         stack.spacing = 24
-        stack.alignment = .leading
+        stack.alignment = .width
         stack.translatesAutoresizingMaskIntoConstraints = false
         addSubview(stack)
 
@@ -455,7 +459,7 @@ class AdvancedPrefsView: NSView, NSTableViewDelegate, NSTableViewDataSource {
 fileprivate func createSection(title: String, content: () -> NSView) -> NSStackView {
     let stack = NSStackView()
     stack.orientation = .vertical
-    stack.alignment = .leading
+    stack.alignment = .width
     stack.spacing = 12
 
     let header = GlassSectionHeader(title: title)
@@ -466,6 +470,7 @@ fileprivate func createSection(title: String, content: () -> NSView) -> NSStackV
     stack.addArrangedSubview(card)
 
     let innerView = content()
+    innerView.setContentCompressionResistancePriority(.required, for: .vertical)
     innerView.translatesAutoresizingMaskIntoConstraints = false
     card.addSubview(innerView)
 

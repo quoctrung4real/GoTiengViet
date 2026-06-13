@@ -16,6 +16,10 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate {
     private let tabAdvanced = NSToolbarItem.Identifier("tabAdvanced")
 
     private var activeTab: NSToolbarItem.Identifier = NSToolbarItem.Identifier("")
+    
+    /// Keep track of active constraints so we can deactivate them before switching tabs
+    private var activeConstraints: [NSLayoutConstraint] = []
+    private var containerBottomConstraint: NSLayoutConstraint?
 
     init() {
         let window = NSWindow(
@@ -28,13 +32,15 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate {
         window.center()
         window.isReleasedWhenClosed = false
         window.titlebarAppearsTransparent = true
+        window.isOpaque = false
+        window.backgroundColor = .clear
 
         // Vibrancy effect for the window background
         let visualEffect = NSVisualEffectView()
         visualEffect.translatesAutoresizingMaskIntoConstraints = false
         visualEffect.blendingMode = .behindWindow
         visualEffect.state = .active
-        visualEffect.material = .windowBackground // Native macOS light/dark adapt
+        visualEffect.material = .popover // Maximum frosted glass effect
         window.contentView = visualEffect
 
         super.init(window: window)
@@ -61,9 +67,11 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate {
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 48), // Space for titlebar
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
+            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24)
         ])
+        
+        containerBottomConstraint = containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
+        containerBottomConstraint?.isActive = true
     }
 
     private func setupToolbar() {
@@ -124,7 +132,9 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate {
         guard identifier != activeTab else { return }
         activeTab = identifier
 
-        // Remove current views
+        // Remove current views and deactivate constraints
+        NSLayoutConstraint.deactivate(activeConstraints)
+        activeConstraints.removeAll()
         containerView.subviews.forEach { $0.removeFromSuperview() }
 
         let newView: NSView
@@ -144,12 +154,31 @@ class PreferencesWindowController: NSWindowController, NSToolbarDelegate {
         newView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(newView)
 
-        NSLayoutConstraint.activate([
+        // Only anchor top, leading, and trailing first to calculate fitting height
+        activeConstraints = [
             newView.topAnchor.constraint(equalTo: containerView.topAnchor),
             newView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            newView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            newView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
-        ])
+            newView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+        ]
+        NSLayoutConstraint.activate(activeConstraints)
+        
+        // Force layout to calculate natural height
+        newView.layoutSubtreeIfNeeded()
+        let targetHeight = newView.fittingSize.height
+        
+        // Now set the bottom constraints
+        let bottomConstraint = newView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        activeConstraints.append(bottomConstraint)
+        bottomConstraint.isActive = true
+
+        // Animate window resize
+        if let window = window {
+            let totalHeight = targetHeight + 48 + 24 // titlebar(48) + bottomPadding(24)
+            var frame = window.frame
+            frame.origin.y += frame.size.height - totalHeight
+            frame.size.height = totalHeight
+            window.setFrame(frame, display: true, animate: true)
+        }
 
         window?.toolbar?.selectedItemIdentifier = identifier
     }
