@@ -23,7 +23,6 @@ class GlassCardView: NSView {
     private func setup() {
         wantsLayer = true
         layer?.cornerRadius = cornerRadius
-        layer?.masksToBounds = true
     }
 
     override func updateLayer() {

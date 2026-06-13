@@ -37,6 +37,7 @@
 		D10000002 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000002; };
 		D10000003 /* HotkeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000003; };
 		D10000004 /* CandidateWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000004; };
+		D10000005 /* PreferencesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000005; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		D20000002 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
 		D20000003 /* HotkeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyRecorderView.swift; sourceTree = "<group>"; };
 		D20000004 /* CandidateWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateWindow.swift; sourceTree = "<group>"; };
+		D20000005 /* PreferencesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				A20000018 /* LiquidGlassView.swift */,
 				A20000019 /* StatusBarManager.swift */,
 				A20000020 /* PreferencesWindow.swift */,
+				D20000005 /* PreferencesViews.swift */,
 				C20000003 /* SwitchNotification.swift */,
 				D20000003 /* HotkeyRecorderView.swift */,
 				D20000004 /* CandidateWindow.swift */,
@@ -283,6 +286,7 @@
 				D10000002 /* WordDictionary.swift in Sources */,
 				D10000003 /* HotkeyRecorderView.swift in Sources */,
 				D10000004 /* CandidateWindow.swift in Sources */,
+				D10000005 /* PreferencesViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

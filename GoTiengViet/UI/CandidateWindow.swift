@@ -59,19 +59,38 @@ class CandidateWindow {
             w.hasShadow = true
             w.ignoresMouseEvents = false
             w.collectionBehavior = [.canJoinAllSpaces, .stationary]
+            
+            // Visual Effect Background
+            let effectView = NSVisualEffectView(frame: NSRect(origin: .zero, size: NSSize(width: windowWidth, height: windowHeight)))
+            effectView.blendingMode = .behindWindow
+            effectView.material = .popover
+            effectView.state = .active
+            effectView.wantsLayer = true
+            effectView.layer?.cornerRadius = 10
+            effectView.layer?.masksToBounds = true
+            effectView.layer?.borderWidth = 1
+            effectView.layer?.borderColor = NSColor(white: 1.0, alpha: 0.1).cgColor
+            
+            let contentView = CandidateContentView(frame: effectView.bounds)
+            contentView.autoresizingMask = [.width, .height]
+            effectView.addSubview(contentView)
+            
+            w.contentView = effectView
             window = w
         }
 
         window?.setFrame(NSRect(origin: windowOrigin, size: NSSize(width: windowWidth, height: windowHeight)), display: true)
 
-        // Build content
-        let contentView = CandidateContentView(frame: NSRect(origin: .zero, size: NSSize(width: windowWidth, height: windowHeight)))
-        contentView.candidates = candidates
-        contentView.selectedIndex = selectedIndex
-        contentView.onSelect = { [weak self] index in
-            self?.selectCandidate(at: index)
+        // Update content
+        if let effectView = window?.contentView,
+           let contentView = effectView.subviews.first(where: { $0 is CandidateContentView }) as? CandidateContentView {
+            contentView.candidates = candidates
+            contentView.selectedIndex = selectedIndex
+            contentView.onSelect = { [weak self] index in
+                self?.selectCandidate(at: index)
+            }
+            contentView.needsDisplay = true
         }
-        window?.contentView = contentView
 
         window?.orderFront(nil)
     }
@@ -122,9 +141,11 @@ class CandidateWindow {
     }
 
     private func updateSelection() {
-        guard let contentView = window?.contentView as? CandidateContentView else { return }
-        contentView.selectedIndex = selectedIndex
-        contentView.needsDisplay = true
+        if let effectView = window?.contentView,
+           let contentView = effectView.subviews.first(where: { $0 is CandidateContentView }) as? CandidateContentView {
+            contentView.selectedIndex = selectedIndex
+            contentView.needsDisplay = true
+        }
     }
 }
 
@@ -143,24 +164,6 @@ private class CandidateContentView: NSView {
         guard NSGraphicsContext.current != nil else { return }
 
         let isDark = effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
-
-        // Background
-        let bgPath = NSBezierPath(roundedRect: bounds.insetBy(dx: 1, dy: 1), xRadius: 10, yRadius: 10)
-        if isDark {
-            NSColor(white: 0.12, alpha: 0.95).setFill()
-        } else {
-            NSColor(white: 0.98, alpha: 0.98).setFill()
-        }
-        bgPath.fill()
-
-        // Border
-        if isDark {
-            NSColor(white: 1.0, alpha: 0.12).setStroke()
-        } else {
-            NSColor(white: 0.0, alpha: 0.08).setStroke()
-        }
-        bgPath.lineWidth = 0.5
-        bgPath.stroke()
 
         // Draw each candidate row
         let font = NSFont.systemFont(ofSize: 13)

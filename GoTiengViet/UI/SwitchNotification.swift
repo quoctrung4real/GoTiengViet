@@ -27,7 +27,7 @@ class SwitchNotification {
         overlayWindow?.orderOut(nil)
 
         // Create the notification window
-        let windowSize = NSSize(width: 180, height: 56)
+        let windowSize = NSSize(width: 160, height: 48)
 
         // Position near the mouse cursor
         let mouseLocation = NSEvent.mouseLocation
@@ -50,10 +50,42 @@ class SwitchNotification {
         window.ignoresMouseEvents = true
         window.collectionBehavior = [.canJoinAllSpaces, .stationary]
 
-        // Create content view
-        let contentView = OSDContentView(frame: NSRect(origin: .zero, size: windowSize))
-        contentView.isVietnamese = isVietnamese
-        window.contentView = contentView
+        // Create content view using Visual Effect
+        let effectView = NSVisualEffectView(frame: NSRect(origin: .zero, size: windowSize))
+        effectView.blendingMode = .behindWindow
+        effectView.material = .hudWindow
+        effectView.state = .active
+        effectView.wantsLayer = true
+        effectView.layer?.cornerRadius = 16
+        effectView.layer?.masksToBounds = true
+        effectView.layer?.borderWidth = 1
+        effectView.layer?.borderColor = NSColor(white: 1.0, alpha: 0.1).cgColor
+
+        // Stack view for contents
+        let stack = NSStackView()
+        stack.orientation = .horizontal
+        stack.alignment = .centerY
+        stack.spacing = 12
+        stack.translatesAutoresizingMaskIntoConstraints = false
+
+        // Flag
+        let flagLabel = NSTextField(labelWithString: isVietnamese ? "🇻🇳" : "🇬🇧")
+        flagLabel.font = NSFont.systemFont(ofSize: 24)
+        stack.addArrangedSubview(flagLabel)
+
+        // Text
+        let textLabel = NSTextField(labelWithString: isVietnamese ? "Tiếng Việt" : "English")
+        textLabel.font = NSFont.systemFont(ofSize: 15, weight: .semibold)
+        textLabel.textColor = .white // HUD material is always dark
+        stack.addArrangedSubview(textLabel)
+
+        effectView.addSubview(stack)
+        NSLayoutConstraint.activate([
+            stack.centerXAnchor.constraint(equalTo: effectView.centerXAnchor),
+            stack.centerYAnchor.constraint(equalTo: effectView.centerYAnchor)
+        ])
+
+        window.contentView = effectView
 
         // Show with fade-in animation
         window.alphaValue = 0.0
@@ -83,74 +115,5 @@ class SwitchNotification {
             window.orderOut(nil)
             self?.overlayWindow = nil
         })
-    }
-}
-
-// MARK: - OSD Content View
-
-/// The visual content of the OSD notification
-/// Liquid Glass design with flag icon and mode text
-private class OSDContentView: NSView {
-
-    var isVietnamese: Bool = true
-
-    override func draw(_ dirtyRect: NSRect) {
-        guard NSGraphicsContext.current != nil else { return }
-
-        let isDark = effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
-
-        // Background — rounded rect with glass effect
-        let bgRect = bounds.insetBy(dx: 2, dy: 2)
-        let bgPath = NSBezierPath(roundedRect: bgRect, xRadius: 14, yRadius: 14)
-
-        if isDark {
-            NSColor(white: 0.15, alpha: 0.9).setFill()
-        } else {
-            NSColor(white: 0.95, alpha: 0.95).setFill()
-        }
-        bgPath.fill()
-
-        // Border
-        if isDark {
-            NSColor(white: 1.0, alpha: 0.15).setStroke()
-        } else {
-            NSColor(white: 0.0, alpha: 0.1).setStroke()
-        }
-        bgPath.lineWidth = 0.5
-        bgPath.stroke()
-
-        // Flag + Text
-        let flag = isVietnamese ? "🇻🇳" : "🇬🇧"
-        let label = isVietnamese ? "Tiếng Việt" : "English"
-
-        // Draw flag
-        let flagFont = NSFont.systemFont(ofSize: 24)
-        let flagAttrs: [NSAttributedString.Key: Any] = [.font: flagFont]
-        let flagStr = NSAttributedString(string: flag, attributes: flagAttrs)
-        let flagSize = flagStr.size()
-        let flagRect = NSRect(
-            x: 16,
-            y: (bounds.height - flagSize.height) / 2,
-            width: flagSize.width,
-            height: flagSize.height
-        )
-        flagStr.draw(in: flagRect)
-
-        // Draw label
-        let labelFont = NSFont.systemFont(ofSize: 16, weight: .semibold)
-        let labelColor = isDark ? NSColor.white : NSColor.black
-        let labelAttrs: [NSAttributedString.Key: Any] = [
-            .font: labelFont,
-            .foregroundColor: labelColor
-        ]
-        let labelStr = NSAttributedString(string: label, attributes: labelAttrs)
-        let labelSize = labelStr.size()
-        let labelRect = NSRect(
-            x: flagRect.maxX + 10,
-            y: (bounds.height - labelSize.height) / 2,
-            width: labelSize.width,
-            height: labelSize.height
-        )
-        labelStr.draw(in: labelRect)
     }
 }
