@@ -91,28 +91,48 @@ class StatusBarManager: NSObject {
     private func setupMenu() {
         let menu = NSMenu()
 
+        // Status header — shows current mode
+        let statusItem = NSMenuItem(
+            title: isVietnamese ? "🇻🇳  Tiếng Việt — BẬT" : "🇬🇧  English — TẮT",
+            action: nil,
+            keyEquivalent: ""
+        )
+        statusItem.isEnabled = false
+        statusItem.tag = 100  // Tag for updating later
+        menu.addItem(statusItem)
+
+        menu.addItem(NSMenuItem.separator())
+
         // Vietnamese/English toggle
         let toggleItem = NSMenuItem(
-            title: "Chuyển đổi Việt/Anh",
+            title: isVietnamese ? "Chuyển sang English" : "Chuyển sang Tiếng Việt",
             action: #selector(toggleVietnamese(_:)),
             keyEquivalent: ""
         )
         toggleItem.target = self
+        toggleItem.tag = 101  // Tag for updating later
         menu.addItem(toggleItem)
 
         menu.addItem(NSMenuItem.separator())
 
-        // Input method submenu
+        // Input method submenu with checkmarks
         let inputMethodItem = NSMenuItem(title: "Kiểu gõ", action: nil, keyEquivalent: "")
         let inputMethodMenu = NSMenu()
 
         let telexItem = NSMenuItem(title: "Telex", action: #selector(selectTelex(_:)), keyEquivalent: "")
         telexItem.target = self
+        telexItem.state = PreferencesManager.shared.inputMethod == .telex ? .on : .off
         inputMethodMenu.addItem(telexItem)
 
         let vniItem = NSMenuItem(title: "VNI", action: #selector(selectVNI(_:)), keyEquivalent: "")
         vniItem.target = self
+        vniItem.state = PreferencesManager.shared.inputMethod == .vni ? .on : .off
         inputMethodMenu.addItem(vniItem)
+
+        let viqrItem = NSMenuItem(title: "VIQR", action: #selector(selectVIQR(_:)), keyEquivalent: "")
+        viqrItem.target = self
+        viqrItem.state = PreferencesManager.shared.inputMethod == .viqr ? .on : .off
+        inputMethodMenu.addItem(viqrItem)
 
         inputMethodItem.submenu = inputMethodMenu
         menu.addItem(inputMethodItem)
@@ -156,7 +176,7 @@ class StatusBarManager: NSObject {
         quitItem.target = self
         menu.addItem(quitItem)
 
-        statusItem?.menu = menu
+        self.statusItem?.menu = menu
     }
 
     /// Create the input menu (called from InputController)
@@ -180,6 +200,13 @@ class StatusBarManager: NSObject {
         isVietnamese.toggle()
         PreferencesManager.shared.vietnameseEnabled = isVietnamese
         updateIcon(isVietnamese: isVietnamese)
+
+        // Rebuild menu to update status header and toggle label
+        setupMenu()
+
+        // Show OSD notification
+        SwitchNotification.shared.show(isVietnamese: isVietnamese)
+
         NotificationCenter.default.post(
             name: PreferencesManager.preferencesDidChangeNotification,
             object: nil
@@ -188,10 +215,17 @@ class StatusBarManager: NSObject {
 
     @objc private func selectTelex(_ sender: Any?) {
         PreferencesManager.shared.inputMethod = .telex
+        setupMenu()  // Rebuild to update checkmarks
     }
 
     @objc private func selectVNI(_ sender: Any?) {
         PreferencesManager.shared.inputMethod = .vni
+        setupMenu()  // Rebuild to update checkmarks
+    }
+
+    @objc private func selectVIQR(_ sender: Any?) {
+        PreferencesManager.shared.inputMethod = .viqr
+        setupMenu()  // Rebuild to update checkmarks
     }
 
     @objc private func showPreferences(_ sender: Any?) {
@@ -226,6 +260,7 @@ class StatusBarManager: NSObject {
         alert.messageText = AppConstants.appName
         alert.informativeText = """
         Phiên bản \(AppConstants.version)
+        by Quoctrung4real • Opensource
         
         Ứng dụng gõ tiếng Việt cho macOS
         Hỗ trợ Telex & VNI

@@ -30,6 +30,13 @@
 		A10000020 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000020; };
 		A10000021 /* InputMethodKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000021; };
 		A10000022 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A20000022; };
+		C10000001 /* AppExclusionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000001; };
+		C10000002 /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000002; };
+		C10000003 /* SwitchNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000003; };
+		D10000001 /* VIQRProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000001; };
+		D10000002 /* WordDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000002; };
+		D10000003 /* HotkeyRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000003; };
+		D10000004 /* CandidateWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000004; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		A20000022 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		A20000023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A20000099 /* GoTiengViet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoTiengViet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20000001 /* AppExclusionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExclusionManager.swift; sourceTree = "<group>"; };
+		C20000002 /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		C20000003 /* SwitchNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchNotification.swift; sourceTree = "<group>"; };
+		D20000001 /* VIQRProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIQRProcessor.swift; sourceTree = "<group>"; };
+		D20000002 /* WordDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDictionary.swift; sourceTree = "<group>"; };
+		D20000003 /* HotkeyRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyRecorderView.swift; sourceTree = "<group>"; };
+		D20000004 /* CandidateWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandidateWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +122,8 @@
 				A20000009 /* VietnameseEngine.swift */,
 				A20000010 /* SpellChecker.swift */,
 				A20000011 /* MacroEngine.swift */,
+				D20000001 /* VIQRProcessor.swift */,
+				D20000002 /* WordDictionary.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -128,6 +144,8 @@
 			children = (
 				A20000016 /* PreferencesManager.swift */,
 				A20000017 /* HotkeyManager.swift */,
+				C20000001 /* AppExclusionManager.swift */,
+				C20000002 /* LaunchAtLoginManager.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -138,6 +156,9 @@
 				A20000018 /* LiquidGlassView.swift */,
 				A20000019 /* StatusBarManager.swift */,
 				A20000020 /* PreferencesWindow.swift */,
+				C20000003 /* SwitchNotification.swift */,
+				D20000003 /* HotkeyRecorderView.swift */,
+				D20000004 /* CandidateWindow.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -255,6 +276,13 @@
 				A10000018 /* LiquidGlassView.swift in Sources */,
 				A10000019 /* StatusBarManager.swift in Sources */,
 				A10000020 /* PreferencesWindow.swift in Sources */,
+				C10000001 /* AppExclusionManager.swift in Sources */,
+				C10000002 /* LaunchAtLoginManager.swift in Sources */,
+				C10000003 /* SwitchNotification.swift in Sources */,
+				D10000001 /* VIQRProcessor.swift in Sources */,
+				D10000002 /* WordDictionary.swift in Sources */,
+				D10000003 /* HotkeyRecorderView.swift in Sources */,
+				D10000004 /* CandidateWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

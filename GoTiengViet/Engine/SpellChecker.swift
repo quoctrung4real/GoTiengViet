@@ -108,22 +108,68 @@ struct SpellChecker {
     // MARK: - Combination Validation
 
     private func validateCombination(initial: String, vowel: String, final_: String) -> Bool {
-        // Rule: Short vowels (ă, â) must have a final consonant
+        // Rule 1: Short vowels (ă, â) must have a final consonant
         if (vowel == "ă" || vowel == "â") && final_.isEmpty {
             return false
         }
 
-        // Rule: 'kh' cannot precede 'oa', 'oe' directly in certain contexts
-        // (This is simplified — full rule set would be more extensive)
+        // Rule 2: Stopped syllables (c, p, t, ch finals) can only take sắc or nặng tones
+        // This is enforced at the syllable level — we validate the structure here
+        // (Actual tone validation is done in validateToneForSyllable)
 
-        // Rule: 'ng', 'nh' finals only with certain vowels
-        if final_ == "ng" || final_ == "nh" {
-            // Generally valid with most vowels
+        // Rule 3: Invalid initial + vowel combinations
+        let invalidCombos: Set<String> = [
+            "kh-y",      // "khy" is invalid
+            "ng-oe",     // "ngoe" is invalid (should be "ngoẹ" etc.)
+            "c-uy",      // "cuy" is invalid
+            "p-ơ",       // "pơ" is invalid  
+        ]
+        let comboKey = "\(initial)-\(vowel)"
+        if invalidCombos.contains(comboKey) {
+            return false
         }
 
-        // Rule: 'c', 'p', 't', 'ch' finals indicate checked tone (sắc or nặng only)
-        // This is a phonological constraint, not strictly spelling
+        // Rule 4: "gi" + vowels starting with "i" is redundant
+        // "gi" already contains the "i", so "gii" is invalid
+        if initial == "gi" && vowel.hasPrefix("i") {
+            return false
+        }
 
+        // Rule 5: Finals "nh", "ch" are only valid after certain vowels
+        if final_ == "ch" {
+            let validVowelsForCh: Set<String> = ["a", "ă", "â", "e", "ê", "i", "oa", "uê"]
+            if !validVowelsForCh.contains(vowel) {
+                return false
+            }
+        }
+
+        if final_ == "nh" {
+            let validVowelsForNh: Set<String> = ["a", "â", "e", "ê", "i", "oa", "uê", "uy"]
+            if !validVowelsForNh.contains(vowel) {
+                return false
+            }
+        }
+
+        return true
+    }
+
+    // MARK: - Tone Validation
+
+    /// Validate that a tone is compatible with the syllable's final consonant
+    /// Vietnamese phonology: stopped syllables (c, p, t, ch) only allow sắc and nặng
+    /// - Parameters:
+    ///   - tone: The tone being applied
+    ///   - final_: The final consonant of the syllable
+    /// - Returns: true if the tone is valid for this syllable structure
+    func isValidTone(_ tone: CharacterMap.Tone, for final_: String) -> Bool {
+        let stoppedFinals: Set<String> = ["c", "p", "t", "ch"]
+
+        if stoppedFinals.contains(final_) {
+            // Only sắc and nặng are valid for stopped syllables
+            return tone == .sac || tone == .nang || tone == .none
+        }
+
+        // All tones are valid for open syllables and sonorant finals (m, n, ng, nh)
         return true
     }
 

@@ -91,8 +91,10 @@ class MacroEngine {
 
     private func loadMacros() {
         guard FileManager.default.fileExists(atPath: macroFilePath.path) else {
-            // Initialize with some common defaults
-            macros = [:]
+            // Initialize with common Vietnamese defaults
+            macros = Self.defaultMacros
+            saveMacros()
+            Log.engine("Initialized with \(macros.count) default macros")
             return
         }
 
@@ -102,9 +104,50 @@ class MacroEngine {
             Log.engine("Loaded \(macros.count) macros")
         } catch {
             Log.engineError("Failed to load macros: \(error.localizedDescription)")
-            macros = [:]
+            macros = Self.defaultMacros
+            saveMacros()
         }
     }
+
+    /// Update an existing macro's shortcut and/or expansion
+    func updateMacro(oldShortcut: String, newShortcut: String, expansion: String) {
+        if oldShortcut.lowercased() != newShortcut.lowercased() {
+            macros.removeValue(forKey: oldShortcut.lowercased())
+        }
+        macros[newShortcut.lowercased()] = expansion
+        saveMacros()
+    }
+
+    /// Reset macros to defaults
+    func resetToDefaults() {
+        macros = Self.defaultMacros
+        saveMacros()
+        Log.engine("Macros reset to defaults")
+    }
+
+    /// Common Vietnamese shorthand macros
+    static let defaultMacros: [String: String] = [
+        "ko": "không",
+        "dc": "được",
+        "j": "gì",
+        "ntn": "như thế nào",
+        "bt": "bình thường",
+        "bn": "bao nhiêu",
+        "mk": "mình",
+        "ns": "nói",
+        "nt": "nhắn tin",
+        "vn": "Việt Nam",
+        "hqua": "hôm qua",
+        "hnay": "hôm nay",
+        "bh": "bây giờ",
+        "trc": "trước",
+        "ck": "chồng",
+        "vk": "vợ",
+        "a": "anh",
+        "e": "em",
+    ]
+
+
 
     private func saveMacros() {
         do {

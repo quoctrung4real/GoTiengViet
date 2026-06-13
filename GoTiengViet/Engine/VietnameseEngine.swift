@@ -56,6 +56,8 @@ class VietnameseEngine {
             self.processor = TelexProcessor()
         case .vni:
             self.processor = VNIProcessor()
+        case .viqr:
+            self.processor = VIQRProcessor()
         }
     }
 
@@ -76,6 +78,8 @@ class VietnameseEngine {
             processor = TelexProcessor()
         case .vni:
             processor = VNIProcessor()
+        case .viqr:
+            processor = VIQRProcessor()
         }
         Log.engine("Switched to \(inputMethod.displayName)")
     }
@@ -124,27 +128,42 @@ class VietnameseEngine {
         }
     }
 
-    /// Handle backspace key
-    /// - Returns: The result of backspace processing
+    /// Handle backspace key — **Smart Backspace**
+    /// Instead of deleting the last Unicode character, this "undoes" the last keystroke
+    /// by replaying the buffer without the last key. For example:
+    /// - Typed "aws" → ắ → Backspace → ă (undoes the 's' tone key)
+    /// - Typed "aw" → ă → Backspace → a (undoes the 'w' modifier)
     func processBackspace() -> EngineResult {
-        guard !buffer.isEmpty else {
+        guard !rawInput.isEmpty else {
             return .passthrough
         }
 
-        // Remove last character from buffer
-        buffer.removeLast()
-        if !rawInput.isEmpty {
-            rawInput.removeLast()
-        }
+        // Remove the last keystroke from raw input
+        rawInput.removeLast()
 
-        if buffer.isEmpty {
+        if rawInput.isEmpty {
+            buffer.removeAll()
             composedText = ""
             return .compositionCleared
         }
 
-        // Recompose the buffer
-        composedText = String(buffer)
+        // Replay the buffer from raw input
+        replayBuffer()
+
         return .compositionUpdated(composedText)
+    }
+
+    /// Replay the entire buffer from rawInput
+    /// This reprocesses each keystroke through the engine to reconstruct the composed text
+    private func replayBuffer() {
+        let savedRaw = rawInput
+        buffer.removeAll()
+        composedText = ""
+
+        // Replay each character through the processor
+        for key in savedRaw {
+            _ = processor.processKey(key, buffer: &buffer, composed: &composedText, tonePlacement: tonePlacement)
+        }
     }
 
     // MARK: - Commit Handling

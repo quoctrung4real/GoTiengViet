@@ -20,17 +20,20 @@ enum AppConstants {
         static let macroData = "macroData"
         static let switchHotkey = "switchHotkey"
         static let perAppSettings = "perAppSettings"
+        static let osdEnabled = "osdEnabled"
     }
 
     // MARK: - Input Method Types
     enum InputMethod: String, CaseIterable {
         case telex = "telex"
         case vni = "vni"
+        case viqr = "viqr"
 
         var displayName: String {
             switch self {
             case .telex: return "Telex"
             case .vni: return "VNI"
+            case .viqr: return "VIQR"
             }
         }
     }

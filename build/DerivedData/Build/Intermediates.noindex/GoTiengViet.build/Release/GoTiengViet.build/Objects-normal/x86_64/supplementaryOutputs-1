@@ -1,0 +1,12 @@
+{
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/main.swift" : {
+    "abi-baseline-json" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet.abi.json",
+    "const-values" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet-primary.swiftconstvalues",
+    "dependencies" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet-primary.d",
+    "diagnostics" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet-primary.dia",
+    "objc-header" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet-Swift.h",
+    "swiftdoc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet.swiftdoc",
+    "swiftmodule" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet.swiftmodule",
+    "swiftsourceinfo" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/x86_64/GoTiengViet.swiftsourceinfo"
+  }
+}

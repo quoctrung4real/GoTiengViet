@@ -65,12 +65,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self?.statusBarManager?.updateClipboardMenu()
         }
 
+        // Show preferences window automatically on startup
+        openPreferences(nil)
+
         Log.info("GoTiengViet ready!")
     }
 
     func applicationWillTerminate(_ notification: Notification) {
         ClipboardManager.shared.stopMonitoring()
         Log.info("GoTiengViet shutting down...")
+    }
+
+    // Handle clicks on the Dock icon when the app is already running
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        // Always show preferences when clicking the dock icon, because IMK might have hidden windows
+        // that make `flag` true even when the main window is closed.
+        openPreferences(nil)
+        return true
     }
 
     // MARK: - Dock Menu

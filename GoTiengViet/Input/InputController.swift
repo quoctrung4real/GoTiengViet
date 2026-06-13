@@ -74,6 +74,12 @@ class InputController: IMKInputController {
             engine.isVietnameseEnabled = perAppMode
         }
 
+        // Check app exclusion list
+        if AppExclusionManager.shared.isExcluded(bundleId: appDetector.currentAppBundleId) {
+            engine.isVietnameseEnabled = false
+            Log.input("App excluded — Vietnamese disabled for \(appDetector.currentAppBundleId ?? "unknown")")
+        }
+
         // Sync engine with current preferences
         applyPreferences()
 

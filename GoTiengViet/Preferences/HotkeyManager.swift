@@ -17,10 +17,16 @@ class HotkeyManager {
 
     // MARK: - Registration
 
-    /// Register the default hotkey (Ctrl+Space)
+    /// Register the hotkey — uses saved custom hotkey or defaults to Ctrl+Space
     func registerDefaultHotkey() {
-        // Ctrl + Space
-        registerHotkey(keyCode: 49, modifiers: UInt32(controlKey))
+        // Check for saved custom hotkey
+        if let data = UserDefaults.standard.data(forKey: AppConstants.Prefs.switchHotkey),
+           let saved = try? JSONDecoder().decode(HotkeyRecorderView.SavedHotkey.self, from: data) {
+            registerHotkey(keyCode: saved.keyCode, modifiers: saved.modifierFlags)
+        } else {
+            // Default: Ctrl + Space
+            registerHotkey(keyCode: 49, modifiers: UInt32(controlKey))
+        }
     }
 
     /// Register a custom hotkey

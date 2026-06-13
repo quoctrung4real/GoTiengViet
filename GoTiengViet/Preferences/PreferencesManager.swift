@@ -29,6 +29,7 @@ class PreferencesManager {
             AppConstants.Prefs.secureFieldBypass: true,
             AppConstants.Prefs.vietnameseEnabled: true,
             AppConstants.Prefs.macroEnabled: true,
+            AppConstants.Prefs.osdEnabled: true,
         ])
     }
 
@@ -103,6 +104,14 @@ class PreferencesManager {
         get { defaults.bool(forKey: AppConstants.Prefs.macroEnabled) }
         set {
             defaults.set(newValue, forKey: AppConstants.Prefs.macroEnabled)
+            notifyChange()
+        }
+    }
+
+    var osdEnabled: Bool {
+        get { defaults.bool(forKey: AppConstants.Prefs.osdEnabled) }
+        set {
+            defaults.set(newValue, forKey: AppConstants.Prefs.osdEnabled)
             notifyChange()
         }
     }

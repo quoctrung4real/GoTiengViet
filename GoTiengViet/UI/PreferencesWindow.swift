@@ -7,6 +7,14 @@ class PreferencesWindowController: NSWindowController {
     private var tabView: NSTabView!
     private let prefs = PreferencesManager.shared
 
+    /// Macro table data
+    private var macroTableView: NSTableView?
+    private var macroData: [(shortcut: String, expansion: String)] = []
+    private let macroEngine = MacroEngine()
+
+    /// App exclusion table data
+    private var exclusionTableView: NSTableView?
+
     init() {
         let window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 520, height: 440),
@@ -28,11 +36,20 @@ class PreferencesWindowController: NSWindowController {
 
         super.init(window: window)
 
+        reloadMacroData()
         setupTabs()
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) not implemented")
+    }
+
+    // MARK: - Macro Data
+
+    private func reloadMacroData() {
+        macroData = macroEngine.getAllMacros()
+            .map { (shortcut: $0.key, expansion: $0.value) }
+            .sorted(by: { $0.shortcut < $1.shortcut })
     }
 
     // MARK: - Tab Setup
@@ -143,19 +160,55 @@ class PreferencesWindowController: NSWindowController {
         encodingDropdown.action = #selector(encodingChanged(_:))
         encodingCard.addSubview(encodingDropdown)
 
-        y -= 60
+        y -= 50
 
-        // Info text
-        let infoLabel = NSTextField(wrappingLabelWithString: "Sử dụng phím tắt trên menu bar hoặc phím tắt hệ thống để chuyển đổi giữa Tiếng Việt và English.")
-        infoLabel.frame = NSRect(x: 20, y: y, width: 420, height: 40)
-        infoLabel.font = NSFont.systemFont(ofSize: 11)
-        infoLabel.textColor = NSColor.tertiaryLabelColor
-        container.addSubview(infoLabel)
+        // Section: Khởi động
+        let launchHeader = GlassSectionHeader(title: "KHỞI ĐỘNG")
+        launchHeader.frame = NSRect(x: 20, y: y, width: 200, height: 16)
+        container.addSubview(launchHeader)
+        y -= 36
+
+        let launchCard = GlassCardView(frame: NSRect(x: 20, y: y, width: 420, height: 40))
+        container.addSubview(launchCard)
+
+        let launchLabel = NSTextField(labelWithString: "Khởi động cùng hệ thống")
+        launchLabel.frame = NSRect(x: 16, y: 10, width: 300, height: 20)
+        launchLabel.font = NSFont.systemFont(ofSize: 13)
+        launchCard.addSubview(launchLabel)
+
+        let launchToggle = GlassToggle(frame: NSRect(x: 360, y: 8, width: 44, height: 24))
+        launchToggle.isOn = LaunchAtLoginManager.shared.isEnabled
+        launchToggle.onToggle = { isOn in
+            LaunchAtLoginManager.shared.setEnabled(isOn)
+        }
+        launchCard.addSubview(launchToggle)
+
+        y -= 50
+
+        // Section: Phím tắt
+        let hotkeyHeader = GlassSectionHeader(title: "PHÍM TẮT CHUYỂN ĐỔI")
+        hotkeyHeader.frame = NSRect(x: 20, y: y, width: 200, height: 16)
+        container.addSubview(hotkeyHeader)
+        y -= 36
+
+        let hotkeyCard = GlassCardView(frame: NSRect(x: 20, y: y, width: 420, height: 40))
+        container.addSubview(hotkeyCard)
+
+        let hotkeyLabel = NSTextField(labelWithString: "Phím tắt Việt/Anh")
+        hotkeyLabel.frame = NSRect(x: 16, y: 10, width: 200, height: 20)
+        hotkeyLabel.font = NSFont.systemFont(ofSize: 13)
+        hotkeyCard.addSubview(hotkeyLabel)
+
+        let hotkeyRecorder = HotkeyRecorderView(frame: NSRect(x: 260, y: 6, width: 144, height: 28))
+        hotkeyRecorder.onHotkeyChanged = { keyCode, modifiers in
+            HotkeyManager.shared.registerHotkey(keyCode: keyCode, modifiers: modifiers)
+        }
+        hotkeyCard.addSubview(hotkeyRecorder)
 
         return container
     }
 
-    // MARK: - Tab 2: Macros
+    // MARK: - Tab 2: Macros (Fully Connected)
 
     private func createMacroView() -> NSView {
         let container = NSView(frame: NSRect(x: 0, y: 0, width: 460, height: 360))
@@ -164,7 +217,16 @@ class PreferencesWindowController: NSWindowController {
         header.frame = NSRect(x: 20, y: 320, width: 200, height: 16)
         container.addSubview(header)
 
-        // Macro table (placeholder — would use NSTableView)
+        // Macro count label
+        let countLabel = NSTextField(labelWithString: "\(macroData.count) mục")
+        countLabel.frame = NSRect(x: 360, y: 320, width: 80, height: 16)
+        countLabel.font = NSFont.systemFont(ofSize: 11)
+        countLabel.textColor = NSColor.tertiaryLabelColor
+        countLabel.alignment = .right
+        countLabel.tag = 999  // Tag to find it later for updating
+        container.addSubview(countLabel)
+
+        // Macro table
         let card = GlassCardView(frame: NSRect(x: 20, y: 60, width: 420, height: 250))
         container.addSubview(card)
 
@@ -173,18 +235,28 @@ class PreferencesWindowController: NSWindowController {
         scrollView.autoresizingMask = [.width, .height]
 
         let tableView = NSTableView(frame: scrollView.bounds)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 24
+        tableView.gridStyleMask = [.solidHorizontalGridLineMask]
+        tableView.allowsMultipleSelection = false
+
         let shortcutColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("shortcut"))
         shortcutColumn.title = "Từ viết tắt"
         shortcutColumn.width = 150
+        shortcutColumn.isEditable = true
         tableView.addTableColumn(shortcutColumn)
 
         let expansionColumn = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("expansion"))
         expansionColumn.title = "Nội dung thay thế"
         expansionColumn.width = 240
+        expansionColumn.isEditable = true
         tableView.addTableColumn(expansionColumn)
 
         scrollView.documentView = tableView
         card.addSubview(scrollView)
+
+        self.macroTableView = tableView
 
         // Buttons
         let addButton = NSButton(title: "Thêm", target: self, action: #selector(addMacro(_:)))
@@ -196,6 +268,11 @@ class PreferencesWindowController: NSWindowController {
         removeButton.bezelStyle = .rounded
         removeButton.frame = NSRect(x: 108, y: 20, width: 80, height: 30)
         container.addSubview(removeButton)
+
+        let resetButton = NSButton(title: "Mặc định", target: self, action: #selector(resetMacros(_:)))
+        resetButton.bezelStyle = .rounded
+        resetButton.frame = NSRect(x: 196, y: 20, width: 80, height: 30)
+        container.addSubview(resetButton)
 
         let importButton = NSButton(title: "Nhập file", target: self, action: #selector(importMacros(_:)))
         importButton.bezelStyle = .rounded
@@ -341,10 +418,10 @@ class PreferencesWindowController: NSWindowController {
         container.addSubview(advHeader)
         y -= 36
 
-        let advCard = GlassCardView(frame: NSRect(x: 20, y: y, width: 420, height: 44))
+        let advCard = GlassCardView(frame: NSRect(x: 20, y: y, width: 420, height: 80))
         container.addSubview(advCard)
 
-        let macroToggle = GlassToggle(frame: NSRect(x: 360, y: 10, width: 44, height: 24))
+        let macroToggle = GlassToggle(frame: NSRect(x: 360, y: 48, width: 44, height: 24))
         macroToggle.isOn = prefs.macroEnabled
         macroToggle.onToggle = { [weak self] isOn in
             self?.prefs.macroEnabled = isOn
@@ -352,9 +429,49 @@ class PreferencesWindowController: NSWindowController {
         advCard.addSubview(macroToggle)
 
         let macroLabel = NSTextField(labelWithString: "Bật gõ tắt (Macro)")
-        macroLabel.frame = NSRect(x: 16, y: 12, width: 300, height: 20)
+        macroLabel.frame = NSRect(x: 16, y: 50, width: 300, height: 20)
         macroLabel.font = NSFont.systemFont(ofSize: 13)
         advCard.addSubview(macroLabel)
+
+        // OSD notification toggle
+        let osdToggle = GlassToggle(frame: NSRect(x: 360, y: 12, width: 44, height: 24))
+        osdToggle.isOn = prefs.osdEnabled
+        osdToggle.onToggle = { [weak self] isOn in
+            self?.prefs.osdEnabled = isOn
+        }
+        advCard.addSubview(osdToggle)
+
+        let osdLabel = NSTextField(labelWithString: "Hiện thông báo khi chuyển đổi Việt/Anh")
+        osdLabel.frame = NSRect(x: 16, y: 14, width: 300, height: 20)
+        osdLabel.font = NSFont.systemFont(ofSize: 13)
+        advCard.addSubview(osdLabel)
+
+        y -= 100
+
+        // Section: Ứng dụng loại trừ
+        let exclusionHeader = GlassSectionHeader(title: "ỨNG DỤNG LOẠI TRỪ")
+        exclusionHeader.frame = NSRect(x: 20, y: y, width: 200, height: 16)
+        container.addSubview(exclusionHeader)
+        y -= 6
+
+        let exclusionHint = NSTextField(labelWithString: "Tự động tắt gõ Việt khi dùng các ứng dụng sau:")
+        exclusionHint.frame = NSRect(x: 20, y: y - 14, width: 420, height: 14)
+        exclusionHint.font = NSFont.systemFont(ofSize: 10)
+        exclusionHint.textColor = NSColor.tertiaryLabelColor
+        container.addSubview(exclusionHint)
+
+        // Buttons for exclusion
+        let addExclButton = NSButton(title: "+", target: self, action: #selector(addExcludedApp(_:)))
+        addExclButton.bezelStyle = .rounded
+        addExclButton.frame = NSRect(x: 380, y: y - 16, width: 28, height: 20)
+        addExclButton.font = NSFont.systemFont(ofSize: 13, weight: .bold)
+        container.addSubview(addExclButton)
+
+        let removeExclButton = NSButton(title: "−", target: self, action: #selector(removeExcludedApp(_:)))
+        removeExclButton.bezelStyle = .rounded
+        removeExclButton.frame = NSRect(x: 412, y: y - 16, width: 28, height: 20)
+        removeExclButton.font = NSFont.systemFont(ofSize: 13, weight: .bold)
+        container.addSubview(removeExclButton)
 
         return container
     }
@@ -379,12 +496,85 @@ class PreferencesWindowController: NSWindowController {
         prefs.outputEncoding = encoding
     }
 
+    // MARK: - Macro Actions (Fully Connected)
+
     @objc private func addMacro(_ sender: Any?) {
-        Log.ui("Add macro action")
+        // Show an input dialog to add a new macro
+        let alert = NSAlert()
+        alert.messageText = "Thêm gõ tắt mới"
+        alert.informativeText = "Nhập từ viết tắt và nội dung thay thế:"
+        alert.addButton(withTitle: "Thêm")
+        alert.addButton(withTitle: "Hủy")
+
+        let containerView = NSView(frame: NSRect(x: 0, y: 0, width: 300, height: 60))
+
+        let shortcutLabel = NSTextField(labelWithString: "Viết tắt:")
+        shortcutLabel.frame = NSRect(x: 0, y: 36, width: 70, height: 20)
+        containerView.addSubview(shortcutLabel)
+
+        let shortcutField = NSTextField(frame: NSRect(x: 75, y: 34, width: 225, height: 24))
+        shortcutField.placeholderString = "vd: ko"
+        containerView.addSubview(shortcutField)
+
+        let expansionLabel = NSTextField(labelWithString: "Thay thế:")
+        expansionLabel.frame = NSRect(x: 0, y: 4, width: 70, height: 20)
+        containerView.addSubview(expansionLabel)
+
+        let expansionField = NSTextField(frame: NSRect(x: 75, y: 2, width: 225, height: 24))
+        expansionField.placeholderString = "vd: không"
+        containerView.addSubview(expansionField)
+
+        alert.accessoryView = containerView
+        alert.window.initialFirstResponder = shortcutField
+
+        let response = alert.runModal()
+        if response == .alertFirstButtonReturn {
+            let shortcut = shortcutField.stringValue.trimmingCharacters(in: .whitespaces)
+            let expansion = expansionField.stringValue.trimmingCharacters(in: .whitespaces)
+            guard !shortcut.isEmpty, !expansion.isEmpty else { return }
+
+            macroEngine.addMacro(shortcut: shortcut, expansion: expansion)
+            reloadMacroData()
+            macroTableView?.reloadData()
+            updateMacroCountLabel()
+        }
     }
 
     @objc private func removeMacro(_ sender: Any?) {
-        Log.ui("Remove macro action")
+        guard let tableView = macroTableView else { return }
+        let selectedRow = tableView.selectedRow
+        guard selectedRow >= 0, selectedRow < macroData.count else {
+            let alert = NSAlert()
+            alert.messageText = "Chưa chọn mục nào"
+            alert.informativeText = "Hãy chọn một mục trong bảng để xóa."
+            alert.alertStyle = .informational
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
+            return
+        }
+
+        let shortcut = macroData[selectedRow].shortcut
+        macroEngine.removeMacro(shortcut: shortcut)
+        reloadMacroData()
+        tableView.reloadData()
+        updateMacroCountLabel()
+    }
+
+    @objc private func resetMacros(_ sender: Any?) {
+        let alert = NSAlert()
+        alert.messageText = "Khôi phục mặc định?"
+        alert.informativeText = "Tất cả gõ tắt hiện tại sẽ bị thay thế bằng danh sách mặc định."
+        alert.alertStyle = .warning
+        alert.addButton(withTitle: "Khôi phục")
+        alert.addButton(withTitle: "Hủy")
+
+        let response = alert.runModal()
+        if response == .alertFirstButtonReturn {
+            macroEngine.resetToDefaults()
+            reloadMacroData()
+            macroTableView?.reloadData()
+            updateMacroCountLabel()
+        }
     }
 
     @objc private func importMacros(_ sender: Any?) {
@@ -392,10 +582,32 @@ class PreferencesWindowController: NSWindowController {
         panel.allowedContentTypes = [.json]
         panel.canChooseFiles = true
         panel.canChooseDirectories = false
-        panel.begin { response in
+        panel.begin { [weak self] response in
             guard response == .OK, let url = panel.url else { return }
-            // Import macros from file
-            Log.ui("Import macros from: \(url.path)")
+            do {
+                try self?.macroEngine.importMacros(from: url, merge: true)
+                self?.reloadMacroData()
+                DispatchQueue.main.async {
+                    self?.macroTableView?.reloadData()
+                    self?.updateMacroCountLabel()
+
+                    let alert = NSAlert()
+                    alert.messageText = "Nhập thành công!"
+                    alert.informativeText = "Đã nhập gõ tắt từ file."
+                    alert.alertStyle = .informational
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    let alert = NSAlert()
+                    alert.messageText = "Lỗi nhập file"
+                    alert.informativeText = error.localizedDescription
+                    alert.alertStyle = .critical
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
+            }
         }
     }
 
@@ -403,14 +615,164 @@ class PreferencesWindowController: NSWindowController {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.json]
         panel.nameFieldStringValue = "macros.json"
+        panel.begin { [weak self] response in
+            guard response == .OK, let url = panel.url else { return }
+            do {
+                try self?.macroEngine.exportMacros(to: url)
+                DispatchQueue.main.async {
+                    let alert = NSAlert()
+                    alert.messageText = "Xuất thành công!"
+                    alert.informativeText = "Đã lưu \(self?.macroData.count ?? 0) gõ tắt."
+                    alert.alertStyle = .informational
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    let alert = NSAlert()
+                    alert.messageText = "Lỗi xuất file"
+                    alert.informativeText = error.localizedDescription
+                    alert.alertStyle = .critical
+                    alert.addButton(withTitle: "OK")
+                    alert.runModal()
+                }
+            }
+        }
+    }
+
+    private func updateMacroCountLabel() {
+        // Find the count label by tag in the macro tab
+        if let macroView = tabView?.tabViewItem(at: 1).view {
+            if let countLabel = macroView.viewWithTag(999) as? NSTextField {
+                countLabel.stringValue = "\(macroData.count) mục"
+            }
+        }
+    }
+
+    // MARK: - App Exclusion Actions
+
+    @objc private func addExcludedApp(_ sender: Any?) {
+        let panel = NSOpenPanel()
+        panel.canChooseFiles = true
+        panel.canChooseDirectories = false
+        panel.allowedContentTypes = [.application]
+        panel.directoryURL = URL(fileURLWithPath: "/Applications")
+        panel.message = "Chọn ứng dụng muốn loại trừ"
+        panel.prompt = "Thêm"
+
         panel.begin { response in
             guard response == .OK, let url = panel.url else { return }
-            Log.ui("Export macros to: \(url.path)")
+            if let bundle = Bundle(url: url), let bundleId = bundle.bundleIdentifier {
+                let appName = url.deletingPathExtension().lastPathComponent
+                AppExclusionManager.shared.addExcludedApp(bundleId: bundleId, name: appName)
+                Log.ui("Added excluded app: \(appName) (\(bundleId))")
+            }
+        }
+    }
+
+    @objc private func removeExcludedApp(_ sender: Any?) {
+        // Show list of excluded apps to remove
+        let excluded = AppExclusionManager.shared.excludedApps
+        guard !excluded.isEmpty else {
+            let alert = NSAlert()
+            alert.messageText = "Chưa có ứng dụng loại trừ"
+            alert.informativeText = "Bấm + để thêm ứng dụng vào danh sách loại trừ."
+            alert.addButton(withTitle: "OK")
+            alert.runModal()
+            return
+        }
+
+        let alert = NSAlert()
+        alert.messageText = "Xóa ứng dụng loại trừ"
+        alert.informativeText = "Chọn ứng dụng muốn xóa khỏi danh sách:"
+        alert.addButton(withTitle: "Xóa")
+        alert.addButton(withTitle: "Hủy")
+
+        let popup = NSPopUpButton(frame: NSRect(x: 0, y: 0, width: 250, height: 26), pullsDown: false)
+        for app in excluded {
+            popup.addItem(withTitle: "\(app.name) (\(app.bundleId))")
+        }
+        alert.accessoryView = popup
+
+        let response = alert.runModal()
+        if response == .alertFirstButtonReturn {
+            let selectedIndex = popup.indexOfSelectedItem
+            guard selectedIndex >= 0, selectedIndex < excluded.count else { return }
+            AppExclusionManager.shared.removeExcludedApp(bundleId: excluded[selectedIndex].bundleId)
         }
     }
 
     @objc private func convertClipboard(_ sender: Any?) {
         Log.ui("Convert clipboard action")
         // TODO: Implement clipboard conversion
+    }
+}
+
+// MARK: - NSTableViewDataSource & NSTableViewDelegate (Macro Table)
+
+extension PreferencesWindowController: NSTableViewDataSource, NSTableViewDelegate {
+
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return macroData.count
+    }
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard row < macroData.count else { return nil }
+
+        let identifier = tableColumn?.identifier ?? NSUserInterfaceItemIdentifier("shortcut")
+        let cellId = NSUserInterfaceItemIdentifier("MacroCell_\(identifier.rawValue)")
+
+        let textField: NSTextField
+        if let existing = tableView.makeView(withIdentifier: cellId, owner: self) as? NSTextField {
+            textField = existing
+        } else {
+            textField = NSTextField()
+            textField.identifier = cellId
+            textField.isBordered = false
+            textField.drawsBackground = false
+            textField.font = NSFont.systemFont(ofSize: 13)
+            textField.isEditable = true
+            textField.delegate = self
+        }
+
+        // Tag encodes row + column for edit tracking
+        textField.tag = row
+
+        if identifier.rawValue == "shortcut" {
+            textField.stringValue = macroData[row].shortcut
+        } else {
+            textField.stringValue = macroData[row].expansion
+        }
+
+        return textField
+    }
+}
+
+// MARK: - NSTextFieldDelegate (Inline Macro Editing)
+
+extension PreferencesWindowController: NSTextFieldDelegate {
+
+    func controlTextDidEndEditing(_ obj: Notification) {
+        guard let textField = obj.object as? NSTextField,
+              let tableView = macroTableView else { return }
+
+        let row = tableView.row(for: textField)
+        let column = tableView.column(for: textField)
+        guard row >= 0, row < macroData.count else { return }
+
+        let oldEntry = macroData[row]
+        let newValue = textField.stringValue.trimmingCharacters(in: .whitespaces)
+        guard !newValue.isEmpty else { return }
+
+        if column == 0 {
+            // Shortcut changed
+            macroEngine.updateMacro(oldShortcut: oldEntry.shortcut, newShortcut: newValue, expansion: oldEntry.expansion)
+        } else {
+            // Expansion changed
+            macroEngine.updateMacro(oldShortcut: oldEntry.shortcut, newShortcut: oldEntry.shortcut, expansion: newValue)
+        }
+
+        reloadMacroData()
+        tableView.reloadData()
     }
 }
