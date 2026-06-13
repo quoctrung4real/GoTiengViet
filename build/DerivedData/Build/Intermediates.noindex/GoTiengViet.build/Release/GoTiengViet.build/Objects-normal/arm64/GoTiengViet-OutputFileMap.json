@@ -38,6 +38,11 @@
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/TonePlacement.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/TonePlacement.o"
   },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VIQRProcessor.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VIQRProcessor.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VIQRProcessor.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VIQRProcessor.o"
+  },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/VNIProcessor.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.o",
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VNIProcessor.bc",
@@ -47,6 +52,11 @@
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.o",
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/VietnameseEngine.o"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Engine/WordDictionary.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/WordDictionary.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/WordDictionary.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/WordDictionary.o"
   },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Input/ClientAppDetector.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/ClientAppDetector.o",
@@ -68,20 +78,45 @@
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/SecureFieldHandler.o"
   },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Preferences/AppExclusionManager.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/AppExclusionManager.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/AppExclusionManager.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/AppExclusionManager.o"
+  },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Preferences/HotkeyManager.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.o",
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/HotkeyManager.o"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Preferences/LaunchAtLoginManager.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/LaunchAtLoginManager.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/LaunchAtLoginManager.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/LaunchAtLoginManager.o"
   },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Preferences/PreferencesManager.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.o",
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesManager.o"
   },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/CandidateWindow.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/CandidateWindow.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/CandidateWindow.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/CandidateWindow.o"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/HotkeyRecorderView.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/HotkeyRecorderView.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/HotkeyRecorderView.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/HotkeyRecorderView.o"
+  },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/LiquidGlassView.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.o",
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/LiquidGlassView.o"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/PreferencesViews.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesViews.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesViews.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesViews.o"
   },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/PreferencesWindow.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/PreferencesWindow.o",
@@ -92,6 +127,11 @@
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.o",
     "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.bc",
     "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/StatusBarManager.o"
+  },
+  "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/UI/SwitchNotification.swift" : {
+    "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/SwitchNotification.o",
+    "llvm-bc" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/SwitchNotification.bc",
+    "object" : "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/build/DerivedData/Build/Intermediates.noindex/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/SwitchNotification.o"
   },
   "/Users/trungngo/.gemini/antigravity-ide/scratch/GoTiengViet/GoTiengViet/Utils/ClipboardManager.swift" : {
     "index-unit-output-path" : "/GoTiengViet.build/Release/GoTiengViet.build/Objects-normal/arm64/ClipboardManager.o",

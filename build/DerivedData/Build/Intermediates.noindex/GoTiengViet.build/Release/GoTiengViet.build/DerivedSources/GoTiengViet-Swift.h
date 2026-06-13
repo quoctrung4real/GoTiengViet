@@ -372,6 +372,17 @@ extern "C" {
 
 #if defined(__OBJC__)
 
+@class NSCoder;
+@class NSTableView;
+@class NSTableColumn;
+SWIFT_CLASS("_TtC11GoTiengViet17AdvancedPrefsView")
+@interface AdvancedPrefsView : NSView <NSTableViewDataSource, NSTableViewDelegate>
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (NSInteger)numberOfRowsInTableView:(NSTableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (id _Nullable)tableView:(NSTableView * _Nonnull)tableView objectValueForTableColumn:(NSTableColumn * _Nullable)tableColumn row:(NSInteger)row SWIFT_WARN_UNUSED_RESULT;
+@end
+
 @class NSNotification;
 @class NSApplication;
 @class NSMenu;
@@ -400,7 +411,18 @@ SWIFT_PROTOCOL("_TtP11GoTiengViet26ClipboardMenuActionHandler_")
 - (void)clearClipboardHistory:(id _Nullable)sender;
 @end
 
-@class NSCoder;
+SWIFT_CLASS("_TtC11GoTiengViet16ConvertPrefsView")
+@interface ConvertPrefsView : NSView
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC11GoTiengViet16GeneralPrefsView")
+@interface GeneralPrefsView : NSView
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
 /// A custom view with Liquid Glass aesthetic
 /// Features: multi-layer blur, subtle border gradient, inner shadow, rounded corners
 SWIFT_CLASS("_TtC11GoTiengViet13GlassCardView")
@@ -446,8 +468,20 @@ SWIFT_CLASS("_TtC11GoTiengViet11GlassToggle")
 @property (nonatomic, readonly) NSSize intrinsicContentSize;
 @end
 
-@class IMKServer;
 @class NSEvent;
+/// A view that records a keyboard shortcut combination
+/// Click to start recording, press the desired key combo, it auto-saves
+SWIFT_CLASS("_TtC11GoTiengViet18HotkeyRecorderView")
+@interface HotkeyRecorderView : NSView
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly) BOOL acceptsFirstResponder;
+- (void)keyDown:(NSEvent * _Nonnull)event;
+- (void)flagsChanged:(NSEvent * _Nonnull)event;
+- (void)cancelOperation:(id _Nullable)sender;
+@end
+
+@class IMKServer;
 /// Main Input Method Controller
 /// Subclass of IMKInputController — handles all keyboard events from the system
 /// <h2>Critical Architecture Notes:</h2>
@@ -479,13 +513,27 @@ SWIFT_CLASS("_TtC11GoTiengViet15InputController")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+SWIFT_CLASS("_TtC11GoTiengViet14MacroPrefsView")
+@interface MacroPrefsView : NSView <NSTableViewDataSource, NSTableViewDelegate, NSTextFieldDelegate>
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (NSInteger)numberOfRowsInTableView:(NSTableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (id _Nullable)tableView:(NSTableView * _Nonnull)tableView objectValueForTableColumn:(NSTableColumn * _Nullable)tableColumn row:(NSInteger)row SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(NSTableView * _Nonnull)tableView setObjectValue:(id _Nullable)object forTableColumn:(NSTableColumn * _Nullable)tableColumn row:(NSInteger)row;
+- (nonnull instancetype)initWithFrame:(NSRect)frameRect SWIFT_UNAVAILABLE;
+@end
+
+@class NSToolbar;
+@class NSToolbarItem;
 @class NSWindow;
-/// Preferences window controller with Liquid Glass design
-/// Tab-based interface: Chung (General), Gõ tắt (Macros), Chuyển mã (Convert), Nâng cao (Advanced)
+/// Preferences window controller with Liquid Glass design & Auto Layout
 SWIFT_CLASS("_TtC11GoTiengViet27PreferencesWindowController")
-@interface PreferencesWindowController : NSWindowController
+@interface PreferencesWindowController : NSWindowController <NSToolbarDelegate>
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+- (NSArray<NSToolbarItemIdentifier> * _Nonnull)toolbarDefaultItemIdentifiers:(NSToolbar * _Nonnull)toolbar SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<NSToolbarItemIdentifier> * _Nonnull)toolbarAllowedItemIdentifiers:(NSToolbar * _Nonnull)toolbar SWIFT_WARN_UNUSED_RESULT;
+- (NSArray<NSToolbarItemIdentifier> * _Nonnull)toolbarSelectableItemIdentifiers:(NSToolbar * _Nonnull)toolbar SWIFT_WARN_UNUSED_RESULT;
+- (NSToolbarItem * _Nullable)toolbar:(NSToolbar * _Nonnull)toolbar itemForItemIdentifier:(NSToolbarItemIdentifier _Nonnull)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithWindow:(NSWindow * _Nullable)window SWIFT_UNAVAILABLE;
 @end
 
