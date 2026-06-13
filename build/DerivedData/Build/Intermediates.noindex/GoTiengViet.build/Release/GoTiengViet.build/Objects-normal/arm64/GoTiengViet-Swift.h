@@ -520,18 +520,12 @@ SWIFT_CLASS("_TtC11GoTiengViet14MacroPrefsView")
 - (nonnull instancetype)initWithFrame:(NSRect)frameRect SWIFT_UNAVAILABLE;
 @end
 
-@class NSToolbar;
-@class NSToolbarItem;
 @class NSWindow;
 /// Preferences window controller with Liquid Glass design & Auto Layout
 SWIFT_CLASS("_TtC11GoTiengViet27PreferencesWindowController")
-@interface PreferencesWindowController : NSWindowController <NSToolbarDelegate>
+@interface PreferencesWindowController : NSWindowController
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-- (NSArray<NSToolbarItemIdentifier> * _Nonnull)toolbarDefaultItemIdentifiers:(NSToolbar * _Nonnull)toolbar SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<NSToolbarItemIdentifier> * _Nonnull)toolbarAllowedItemIdentifiers:(NSToolbar * _Nonnull)toolbar SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<NSToolbarItemIdentifier> * _Nonnull)toolbarSelectableItemIdentifiers:(NSToolbar * _Nonnull)toolbar SWIFT_WARN_UNUSED_RESULT;
-- (NSToolbarItem * _Nullable)toolbar:(NSToolbar * _Nonnull)toolbar itemForItemIdentifier:(NSToolbarItemIdentifier _Nonnull)itemIdentifier willBeInsertedIntoToolbar:(BOOL)flag SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithWindow:(NSWindow * _Nullable)window SWIFT_UNAVAILABLE;
 @end
 
